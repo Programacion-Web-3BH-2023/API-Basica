@@ -10,7 +10,7 @@
 
 
     @include("encabezado");
-    
+
     <table>
         <tr>
             <td>
@@ -46,6 +46,10 @@
                 </td>
                 <td>
                     {{ $p -> updated_at }}
+                </td>
+
+                <td>
+                    <a href="/eliminar?id={{ $p -> id }}">Eliminar</a>
                 </td>
 
             </tr>

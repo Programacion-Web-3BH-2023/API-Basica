@@ -13,6 +13,13 @@ class PersonaController extends Controller
         ]);
     }
 
+    public function Eliminar(Request $request){
+        $persona = Persona::findOrFail($request -> get("id"));
+        $persona -> delete();
+
+        return redirect("/");
+
+    }
     public function Insertar(Request $request){
         $persona = new Persona;
         $persona -> nombre = $request -> post("nombre");

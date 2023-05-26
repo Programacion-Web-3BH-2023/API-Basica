@@ -20,5 +20,5 @@ Route::get("/crear",function () {
 });
 
 Route::get("/",[PersonaController::class,"Listar"]);
-
+Route::get("/eliminar",[PersonaController::class,"Eliminar"]);
 Route::post("/crear",[PersonaController::class,"Insertar"]);
