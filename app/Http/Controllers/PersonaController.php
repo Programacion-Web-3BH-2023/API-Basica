@@ -13,8 +13,8 @@ class PersonaController extends Controller
         ]);
     }
 
-    public function Eliminar(Request $request){
-        $persona = Persona::findOrFail($request -> get("id"));
+    public function Eliminar(Request $request, $idPersona){
+        $persona = Persona::findOrFail($idPersona);
         $persona -> delete();
 
         return redirect("/");

@@ -49,7 +49,7 @@
                 </td>
 
                 <td>
-                    <a href="/eliminar?id={{ $p -> id }}">Eliminar</a>
+                    <a href="/eliminar/{{ $p -> id }}">Eliminar</a>
                 </td>
 
             </tr>
