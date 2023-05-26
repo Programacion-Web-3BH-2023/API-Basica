@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    @include("encabezado");
+
     <form action="/crear" method="post">
         @csrf 
         Nombre <input type="text" name="nombre" id=""> <br>

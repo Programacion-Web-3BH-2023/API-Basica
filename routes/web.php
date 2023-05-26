@@ -15,13 +15,10 @@ use App\Http\Controllers\PersonaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::get("/crear",function () {
     return view('crearPersona');
 });
+
+Route::get("/",[PersonaController::class,"Listar"]);
 
 Route::post("/crear",[PersonaController::class,"Insertar"]);

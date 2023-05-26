@@ -8,7 +8,7 @@ use App\Models\Persona;
 class PersonaController extends Controller
 {
     public function Listar(Request $request){
-        return view("personas",[
+        return view("listarPersonas",[
             "personas" => Persona::all()
         ]);
     }
