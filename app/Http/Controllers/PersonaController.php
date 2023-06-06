@@ -20,7 +20,9 @@ class PersonaController extends Controller
         $persona = Persona::findOrFail($idPersona);
         $persona -> delete();
 
-        return redirect("/");
+        return [ "mensaje" => "Persona $idPersona eliminada."];
+
+
 
     }
     public function Insertar(Request $request){
@@ -31,5 +33,14 @@ class PersonaController extends Controller
         $persona -> save();
 
         return $persona;
+    }
+
+    public function Modificar(Request $request, $idPersona){
+        $persona = Persona::findOrFail($idPersona);
+        $persona -> nombre = $request -> post("nombre");
+        $persona -> apellido = $request -> post("apellido");
+        $persona -> save();
+        return $persona;
+
     }
 }

@@ -24,3 +24,7 @@ Route::get("/personas",[PersonaController::class,"Listar"]);
 Route::get("/personas/{d}",[PersonaController::class,"ListarUno"]);
 
 Route::post("/personas",[PersonaController::class,"Insertar"]);
+
+Route::put("/personas/{d}",[PersonaController::class,"Modificar"]);
+
+Route::delete("/personas/{d}",[PersonaController::class,"Eliminar"]);
