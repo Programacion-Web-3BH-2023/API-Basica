@@ -14,11 +14,3 @@ use App\Http\Controllers\PersonaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get("/crear",function () {
-    return view('crearPersona');
-});
-
-Route::get("/",[PersonaController::class,"Listar"]);
-Route::get("/eliminar/{d}",[PersonaController::class,"Eliminar"]);
-Route::post("/crear",[PersonaController::class,"Insertar"]);

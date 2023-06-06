@@ -8,9 +8,12 @@ use App\Models\Persona;
 class PersonaController extends Controller
 {
     public function Listar(Request $request){
-        return view("listarPersonas",[
-            "personas" => Persona::all()
-        ]);
+        return Persona::all();
+    }
+
+    public function ListarUno(Request $request, $idPersona){
+        return Persona::findOrFail($idPersona);
+
     }
 
     public function Eliminar(Request $request, $idPersona){
@@ -27,12 +30,6 @@ class PersonaController extends Controller
 
         $persona -> save();
 
-        return view('crearPersona',[
-            "creado" => true
-        ]);
-
-
-
-
+        return $persona;
     }
 }
